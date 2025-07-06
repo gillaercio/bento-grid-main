@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-family: 'DMSans';
+  src: url('../fonts/DMSans-VariableFont_opsz.ttf') format('truetype');
+  /* font-weight: 500;
+  font-style: normal; */
+}
+@font-face {
+  font-family: 'DMSansItalic';
+  src: url('../fonts/DMSans-Italic-VariableFont_opsz.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  
+  --Red-100: hsl(23, 100%, 92%);
+
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+
+  --normal-font: 'DMSans', sans-serif;
+  --italic-font: 'DMSansItalic', sans-serif;
+
+  --text-title: 600 3.2rem/150% var(--normal-font);
+  --text-title-italic: 600 italic 3.2rem/150% var(--italic-font);
+
+  --text-subtitle: 600 2.1rem/100% var(--normal-font);
+  --text-subtitle-italic: 600 italic 2.1rem/100% var(--italic-font);
+
+  --text-lead: 600 2rem/150% var(--normal-font);
+  --text-body: 500 1.7rem/150% var(--normal-font);
+}

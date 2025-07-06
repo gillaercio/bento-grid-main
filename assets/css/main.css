@@ -1,0 +1,121 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Yellow-100);
+}
+
+#content {
+  max-width: 375px;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid red;
+}
+
+.post__title { font: var(--text-title); }
+.post__subtitle { font: var(--text-subtitle); }
+.post__lead { font: var(--text-lead); }
+.post__body {  font: var(--text-body); }
+
+.text-title-italic {font: var(--text-title-italic); }
+.text-subtitle-italic {
+  font: var(--text-subtitle-italic);
+  color: var(--Purple-500);
+}
+
+.post__image {
+  width: 100%;
+}
+
+.highlight-text {
+  color: var(--Yellow-500);
+}
+
+.post {
+  border-radius: 12px;
+  padding: 20px 30px;
+}
+
+.post--five-stars {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+}
+
+.post--five-stars .post__title {
+  padding: 20px 35px;
+}
+
+.post--five-stars .post__image {
+  width: 50%;
+}
+
+.post--manage-accounts,
+.post--audience-growth {
+  background-color: var(--White);
+}
+
+.post--manage-accounts .post__image {
+  padding: 10px;
+}
+
+.post--maintain-schedule,
+.post--using-ai {
+  background-color: var(--Yellow-500);
+}
+
+.post--maintain-schedule .post__image,
+.post--using-ai .post__image {
+  width: 75%;
+  margin-top: 10px;
+}
+
+.post--using-ai .post__subtitle { width: 90%; }
+
+.post--social-media {
+  background-color: var(--Purple-100);
+  text-align: center;
+  justify-items: center;
+}
+
+.post--social-media .post__image {
+  margin-top: 10px;
+}
+
+.post--social-media .post__body {
+  padding-block: 15px;
+  width: 85%;
+}
+
+.post--grow-followers {
+  background-color: var(--Purple-500);
+  justify-items: center;
+}
+
+.post--grow-followers .post__image {
+  width: 75%;
+  display: flex;
+  padding-block: 10px;
+}
+
+.post--grow-followers .post__subtitle {
+  text-align: center;
+  color: var(--White);
+  padding-inline: 35px;
+}
+
+.post--audience-growth .post__image {
+  width: 60%;
+  margin-top: 10px;
+}
+
+.post--schedule-content {
+  background-color: var(--Red-100);
+}
+
+.post--schedule-content .post__image {
+  width: 60%;
+  margin-top: 10px;
+}
