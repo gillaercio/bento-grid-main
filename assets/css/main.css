@@ -1,5 +1,5 @@
 body {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
   background-color: var(--Yellow-100);
@@ -8,8 +8,7 @@ body {
 #content {
   max-width: 375px;
   padding: 25px 15px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
   border: 1px solid red;
 }
@@ -36,6 +35,9 @@ body {
 .post {
   border-radius: 12px;
   padding: 20px 30px;
+  height: 100%;
+  /* overflow: hidden; */
+  border: 1px solid red;
 }
 
 .post--five-stars {
@@ -91,19 +93,25 @@ body {
 
 .post--grow-followers {
   background-color: var(--Purple-500);
+  display: grid;
   justify-items: center;
+  align-items: start;
+  outline: 2px dashed lime;
 }
 
 .post--grow-followers .post__image {
   width: 75%;
-  display: flex;
   padding-block: 10px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  outline: 2px dashed red;
 }
 
 .post--grow-followers .post__subtitle {
   text-align: center;
   color: var(--White);
-  padding-inline: 35px;
+  padding-inline: 45px;
 }
 
 .post--audience-growth .post__image {
@@ -118,4 +126,70 @@ body {
 .post--schedule-content .post__image {
   width: 60%;
   margin-top: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    align-items: center;
+  }
+
+  #content {
+    display: grid;
+    height: 90vh;
+    min-width: 1024px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(10,1fr);
+    grid-template-areas:
+    "schedule stars stars media"
+    "schedule stars stars media"
+    "schedule stars stars media"
+    "schedule stars stars media"
+    "schedule accounts maintain media"
+    "ai accounts maintain media"
+    "ai accounts maintain media"
+    "ai audience followers followers"
+    "ai audience followers followers"
+    "ai audience followers followers";
+  }
+
+  .post--schedule-content {
+    grid-area: schedule;
+    /* min-height: 50%; */
+  }
+
+  .post--five-stars {
+    grid-area: stars;
+    /* min-height: 40%; */
+  }
+
+  .post--social-media {
+    grid-area: media;
+    /* min-height: 60%; */
+  }
+
+  .post--using-ai {
+    grid-area: ai;
+    /* min-height: 50%; */
+  }
+
+  .post--manage-accounts {
+    grid-area: accounts;
+    /* min-height: 30%; */
+  }
+
+  .post--maintain-schedule {
+    grid-area: maintain;
+    /* min-height: 30%; */
+  }
+
+  .post--audience-growth {
+    grid-area: audience;
+    /* min-height: 30%; */
+  }
+
+  .post--grow-followers {
+    grid-area: followers;
+    /* min-height: 30%; */
+  }
 }
