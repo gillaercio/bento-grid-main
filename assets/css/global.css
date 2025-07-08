@@ -36,12 +36,12 @@ html {
   --normal-font: 'DMSans', sans-serif;
   --italic-font: 'DMSansItalic', sans-serif;
 
-  --text-title: 600 3.2rem/150% var(--normal-font);
-  --text-title-italic: 600 italic 3.2rem/150% var(--italic-font);
+  --text-title: 600 3.2rem/100% var(--normal-font);
+  --text-title-italic: 600 italic 3.2rem/100% var(--italic-font);
 
   --text-subtitle: 600 2.1rem/100% var(--normal-font);
   --text-subtitle-italic: 600 italic 2.1rem/100% var(--italic-font);
 
-  --text-lead: 600 2rem/150% var(--normal-font);
-  --text-body: 500 1.7rem/150% var(--normal-font);
+  --text-lead: 600 2rem/100% var(--normal-font);
+  --text-body: 500 1.7rem/100% var(--normal-font);
 }
