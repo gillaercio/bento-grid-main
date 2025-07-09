@@ -1,5 +1,6 @@
 body {
   display: grid;
+  /* height: 100vh; */
   align-items: center;
   justify-content: center;
   background-color: var(--Yellow-100);
@@ -10,6 +11,7 @@ body {
   padding: 25px 15px;
   display: grid;
   gap: 20px;
+  transition: width .3 ease-in-out, height .3  ease-in-out;
   outline: 1px dashed red;
 }
 
@@ -40,7 +42,7 @@ body {
 
 .post__image {
   width: 100%;
-  /* outline: 1px dashed red; */
+  outline: 1px dashed red;
 }
 
 .highlight-text {
@@ -52,7 +54,7 @@ body {
   padding: 20px 30px;
   height: 100%;
   /* overflow: hidden; */
-  /* outline: 1px dashed red; */
+  outline: 1px dashed red;
 }
 
 .post--five-stars {
@@ -148,16 +150,19 @@ body {
 @media screen and (min-width: 1024px) {
   body {
     display: grid;
+    height: 100vh;
     padding: 15px;
-    /* align-items: center; */
   }
 
   #content {
     display: grid;
-    height: 90vh;
     min-width: 1024px;
+    height: 768px;
+    max-height: 95vh;
+    /* height: 90vh; */
+    /* max-height: 768px; */
     padding: 0;
-    align-self: center;
+    /* align-self: center; */
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(10,1fr);
     grid-template-areas:
@@ -171,6 +176,7 @@ body {
     "ai audience followers followers"
     "ai audience followers followers"
     "ai audience followers followers";
+    transition: width .3 ease-in-out, height .3  ease-in-out;
   }
 
   .post {
@@ -182,35 +188,31 @@ body {
 
   .post--schedule-content {
     grid-area: schedule;
-    /* min-height: 50%; */
   }
 
-  .post--schedule-content .post__image {
+  /* .post--schedule-content .post__image {
     width: 100%;
-  }
+  } */
 
   .post--five-stars {
     grid-area: stars;
-    /* min-height: 40%; */
   }
 
   .post--five-stars .post__image {
     width: 25%;
     justify-self: center;
-    /* margin-top: 0; */
   }
 
   .post--social-media {
     grid-area: media;
-    /* min-height: 60%; */
     text-align: left;
-    overflow: hidden;
+    /* overflow: hidden; */
   }
 
-  .post--social-media .post__image {
-    width: 130%;
+  /* .post--social-media .post__image {
+    width: 150%;
     justify-self: left;
-  }
+  } */
 
   .post--social-media .post__body {
     justify-self: left;
@@ -219,49 +221,43 @@ body {
 
   .post--using-ai {
     grid-area: ai;
-    align-content: space-between;
-    /* min-height: 50%; */
+    /* align-content: space-between; */
   }
 
-  .post--using-ai .post__image {
+  /* .post--using-ai .post__image {
     width: 100%;
     height: 90%;
-  }
+  } */
 
   .post--manage-accounts {
     grid-area: accounts;
     overflow: hidden;
-    /* min-height: 30%; */
   }
 
-  .post--manage-accounts .post__image {
+  /* .post--manage-accounts .post__image {
     width: 150%;
-    /* justify-self: left; */
-    border: 1px solid red;
-  }
+  } */
 
   .post--maintain-schedule {
     grid-area: maintain;
     align-content: start;
     overflow: hidden;
-    /* min-height: 30%; */
   }
 
-  .post--maintain-schedule .post__image {
+  /* .post--maintain-schedule .post__image {
     width: 100%;
     object-fit: cover;
     object-position: bottom;
-  }
+  } */
 
   .post--audience-growth {
     grid-area: audience;
-    align-content: space-between;
-    /* min-height: 30%; */
+    /* align-content: space-between; */
   }
 
-  .post--audience-growth .post__image {
+  /* .post--audience-growth .post__image {
     width: 80%;
-  }
+  } */
 
   .post--grow-followers {
     grid-area: followers;
@@ -270,7 +266,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-items: space-around;
-    /* min-height: 30%; */
   }
 
   .post--grow-followers .post__subtitle {
@@ -279,7 +274,7 @@ body {
   }
 
   .post--grow-followers .post__image {
-    width: 70%;
+    width: 60%;
   }
 
   /* .post__title {
@@ -292,6 +287,14 @@ body {
   } */
 
   /* .post__lead {
-    font-size: clamp(2rem, 1.8rem + 1.666vw, 2.4rem);
+    font-size: clamp(1.4rem, 1.2rem + 1.666vw, 1.8rem);
   } */
+
+  /* .post__body {
+    font-size: clamp(1.3rem, 1.1rem + 1.666vw, 1.5rem);
+  } */
+}
+
+@media screen and (min-width: 1440px) {
+
 }
